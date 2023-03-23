@@ -1,1 +1,234 @@
-I am alive and kicking ass!
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+
+    .button {
+        display: inline-block;
+        margin: 13px;
+        padding: 10px 0;
+        font-size: 16pt;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.7s ease;
+        cursor: pointer;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+    }
+    #button-red {
+        background-color: #FF0000;
+        background-image: url('button-icon-red.png');
+    }
+    #button-orange {
+        background-color: #FFA500;
+        background-image: url('button-icon-orange.png');
+    }
+    #button-yellow {
+        background-color: #FFFF00;
+        background-image: url('button-icon-yellow.png');
+    }
+    #button-green {
+        background-color: #008000;
+        background-image: url('button-icon-green.png');
+    }
+    #button-blue {
+        background-color: #2caddb;
+        background-image: url('button-icon-blue.png');
+    }
+    #button-dblue {
+        background-color: #352cdb;
+        background-image: url('button-icon-dblue.png');
+    }
+    #button-violet {
+        background-color: #982cdb;
+        background-image: url('button-icon-violet.png');
+    }
+    .button-container { display: flex; flex-wrap: wrap; justify-content: center; }
+    @media screen and (max-width: 768px) { .button-container { flex-direction: column; align-items: center; } }
+    .text {
+        background-color: #f2f2f2;
+        text-align: center;
+        padding: 10px 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        width: 159px;
+        border-radius: 10px;
+        margin: 11px;
+        transition: all 1.6s ease;
+        font-size: 16pt;
+
+    }
+
+    .text.hidden {
+        display: none;
+    }
+
+    #pdzgl
+    {
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        background-color: #f2f2f2;
+        padding: 10px 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        margin: 11px;
+        margin: 10px auto; /* установка блока по центру страницы */
+        max-width: 600px; /* установка максимальной ширины блока */
+        border-radius: 10px; /* установка скругленных углов */
+        padding: 20px; /* установка отступов вокруг текста */
+    }
+    h1 {
+        text-align: center;
+        -webkit-text-stroke: .02em black;
+        font-family: Arial Black;
+        padding: 10px 10px;
+        margin: 10px auto; /* установка блока по центру страницы */
+        background: linear-gradient(to right, red, yellow, green, blue, violet);
+        max-width: 400px;
+        background-position: 10px center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /*text-shadow: 2px 2px 4px rgba(173, 172, 170, 0.5);*/
+    }
+    </style>
+</head>
+<body>
+        <h1>ВЫБЕРИ СВОЙ ЦВЕТ</h1>
+    <p id="pdzgl">Генератор ключей для <a href="https://archiveofourown.org/collections/raduga_fest2">«Радуга-феста»</a>. Нажмите на цветную кнопку, чтобы выбрать ключ соответствующего дня. Приятного творчества!</p>
+    <div id="buttons">
+<div class="button-container">
+
+    <div>
+        <button id="button-red" class="button"></button>
+        <div class="text hidden">КУРРРРВА!</div>
+    </div>
+    <div>
+        <button id="button-orange" class="button"></button>
+        <div class="text hidden">Курвица!</div>
+    </div>
+    <div>
+        <button id="button-yellow" class="button"></button>
+        <div class="text hidden">Пьйэрдолиш!</div>
+    </div>
+    <div>
+        <button id="button-green" class="button"></button>
+        <div class="text hidden">Йэбачь то!</div>
+    </div>
+    <div>
+        <button id="button-blue" class="button"></button>
+        <div class="text hidden">Спьйэрдалай!</div>
+    </div>
+    <div>
+        <button id="button-dblue" class="button"></button>
+        <div class="text hidden">Выпьйэрдалай!</div>
+    </div>
+    <div>
+        <button id="button-violet" class="button"></button>
+        <div class="text hidden">Курва мачь!</div>
+    </div>
+</div>
+
+    </div>
+<script type="text/javascript">
+    function showText() { var text = document.getElementById("text"); if (text.style.display === "none") { text.style.display = "block"; } else { text.style.display = "none"; } }
+const wordlists = [
+    {
+        'sel': '#button-red',
+        'style': 'color: red',
+        'items': [
+            'кровь', 'розы', 'малина', 'клубника', 'томаты', 'вино', 'маки', 'пожар', 'кармин', 'перец', 'радость', 'страсть', 'любовь', 'рубин', 'тушенка', 'сигнальный цвет', 'морская рыба', 'маки', 'кровища', 'коммунизм', 'красноволосых герои', 'фламенко',
+        ],
+    },
+    {
+        'sel': '#button-orange',
+        'style': 'color: orange',
+        'items': [
+            'морковь', 'тыква', 'апельсин', 'лосось', 'солнце', 'огонь', 'листья осени', 'тигр', 'мандарин', 'домашний уют', 'огонь', 'апельсины', 'рыжие люди', 'вулканы', 'верблюд в пустыне',
+        ],
+    },
+    {
+        'sel': '#button-yellow',
+        'style': 'color: yellow',
+        'items': [
+            'лимон', 'солнце', 'банан', 'льняное масло', 'макароны', 'лимонад', 'мед', 'кукуруза', 'золото', 'пшеничные волосы', 'пшеница', 'циплята', 'бананы', 'одуванчики',
+        ],
+    },
+    {
+        'sel': '#button-green',
+        'style': 'color: green',
+        'items': [
+             'листья', 'трава', 'деревья', 'яблоки', 'киви', 'огурцы', 'лайм', 'змеи', 'зависть', 'надежда', 'огурцы', 'лягушки', 'тоска', 'леса Амазонки', 'доллары', 'абсент',
+        ],
+    },
+    {
+        'sel': '#button-blue',
+        'style': 'color: #29b3e6',
+        'items': [
+            'небо', 'вода', 'море', 'глаза', 'джинсы', 'синий кит', 'лед', 'сапфир', 'небо', 'голубые Гавайи', 'яйца дрозда', 'звенящая сталь', 'аристократия',
+        ],
+    },
+    {
+        'sel': '#button-dblue',
+        'style': 'color: #1710e8',
+        'items': [
+             'ночь', 'день', 'глубина', 'грусть', 'доверие', 'верность', 'холод', 'мир', 'лед', 'морской прибой', 'блю кюрасао', 'птица счастья', 'васильки',
+        ],
+    },
+    {
+        'sel': '#button-violet',
+        'style': 'color: violet',
+        'items': [
+            'лаванда', 'аметист', 'фиалка', 'сирень', 'пурпур', 'тайна', 'магия', 'баклажан', 'пофигист',
+        ],
+    },
+
+];
+
+function Randomizer(init) {
+    this.init = init;
+    this.pool = [];
+}
+
+Randomizer.prototype.reseed = function(index) {
+    this.pool = this.init.map(value => ({value, 'key': Math.random() }))
+        .sort((a, b) => a.key - b.key)
+        .map(({value}) => value);
+};
+
+Randomizer.prototype.getNext = function() {
+    if (!this.pool.length) {
+        this.reseed();
+    }
+    return this.pool.pop();
+};
+
+
+function buildUi() {
+    for (let block of wordlists) {
+        const randomizer = new Randomizer(block.items);
+        const button = document.querySelector(block.sel);
+        button.textContent = block.name;
+        button.style = block.style;
+        button.addEventListener('click', function() {
+            const result = button.parentElement.querySelector('div');
+            result.textContent = randomizer.getNext();
+            result.style.display = 'block';
+        });
+    }
+}
+
+buildUi();
+
+</script>
+</body>
+</html>
